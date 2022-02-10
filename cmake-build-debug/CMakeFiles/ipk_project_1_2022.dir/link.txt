@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/ipk_project_1_2022.dir/main.c.o -o ipk_project_1_2022 
+/usr/bin/cc -g CMakeFiles/ipk_project_1_2022.dir/main.c.o CMakeFiles/ipk_project_1_2022.dir/functions.c.o -o ipk_project_1_2022 

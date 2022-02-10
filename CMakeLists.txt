@@ -3,4 +3,4 @@ project(ipk_project_1_2022 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(ipk_project_1_2022 main.c)
+add_executable(ipk_project_1_2022 main.c functions.c functions.h)

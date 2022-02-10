@@ -74,6 +74,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alex/CLionProjects/ipk-project-1-2022/functions.c">
+			<Option target="ipk_project_1_2022"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/ipk-project-1-2022/functions.h">
+			<Option target="ipk_project_1_2022"/>
+		</Unit>
 		<Unit filename="/home/alex/CLionProjects/ipk-project-1-2022/main.c">
 			<Option target="ipk_project_1_2022"/>
 		</Unit>

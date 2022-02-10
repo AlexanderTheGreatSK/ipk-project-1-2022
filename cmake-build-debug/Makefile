@@ -129,6 +129,30 @@ ipk_project_1_2022/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipk_project_1_2022.dir/build.make CMakeFiles/ipk_project_1_2022.dir/build
 .PHONY : ipk_project_1_2022/fast
 
+functions.o: functions.c.o
+.PHONY : functions.o
+
+# target to build an object file
+functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipk_project_1_2022.dir/build.make CMakeFiles/ipk_project_1_2022.dir/functions.c.o
+.PHONY : functions.c.o
+
+functions.i: functions.c.i
+.PHONY : functions.i
+
+# target to preprocess a source file
+functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipk_project_1_2022.dir/build.make CMakeFiles/ipk_project_1_2022.dir/functions.c.i
+.PHONY : functions.c.i
+
+functions.s: functions.c.s
+.PHONY : functions.s
+
+# target to generate assembly for a file
+functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ipk_project_1_2022.dir/build.make CMakeFiles/ipk_project_1_2022.dir/functions.c.s
+.PHONY : functions.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ipk_project_1_2022"
+	@echo "... functions.o"
+	@echo "... functions.i"
+	@echo "... functions.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

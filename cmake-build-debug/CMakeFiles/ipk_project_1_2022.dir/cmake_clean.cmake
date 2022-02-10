@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ipk_project_1_2022.dir/functions.c.o"
   "CMakeFiles/ipk_project_1_2022.dir/main.c.o"
   "ipk_project_1_2022"
   "ipk_project_1_2022.pdb"

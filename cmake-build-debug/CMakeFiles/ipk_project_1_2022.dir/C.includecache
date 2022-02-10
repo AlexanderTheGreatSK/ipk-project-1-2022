@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alex/CLionProjects/ipk-project-1-2022/functions.c
+functions.h
+/home/alex/CLionProjects/ipk-project-1-2022/functions.h
+
+/home/alex/CLionProjects/ipk-project-1-2022/functions.h
+string.h
+/home/alex/CLionProjects/ipk-project-1-2022/string.h
+
+/home/alex/CLionProjects/ipk-project-1-2022/main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+sys/socket.h
+-
+stdbool.h
+/home/alex/CLionProjects/ipk-project-1-2022/stdbool.h
+functions.h
+/home/alex/CLionProjects/ipk-project-1-2022/functions.h
+
