@@ -1,45 +1,53 @@
-//
-// Created by alex on 10. 2. 2022.
-//
-
 #include "functions.h"
 
+/*
+ * Process string to CPULoad data structure
+ *
+ * @param CPULoad structure
+ * @param string which will be processed
+ */
 void cpuLoadData(CPULoad *cpuLoad, char data[100]);
+
+/*
+ * Function for printing all attributes of CPULoad structure
+ *
+ * @param CPULoad data stucture
+ */
 void debugPrintStructure(CPULoad *cpuLoad);
 
-void getHostname() {
-  system("cat /proc/sys/kernel/hostname");
+void getHostname(char **name) {
+  FILE *f;
+  f = popen("cat /proc/sys/kernel/hostname", "r");
+  fgets(*name, 100, f);
 }
 
-void getCPUInfo() {
-  system("lscpu | grep \"Model name:\" | sed -r 's/Model name:\\s{1,}//g'");
+void getCPUInfo(char **name) {
+  FILE *f;
+  f = popen("lscpu | grep \"Model name:\" | sed -r 's/Model name:\\s{1,}//g'", "r");
+  fgets(*name, 100, f);
 }
-void getCPUActualLoad() {
+
+int getCPUActualLoad() {
   FILE *fp;
   char path[100];
 
 
   CPULoad *prev = malloc(sizeof(CPULoad));
   CPULoad *curr = malloc(sizeof(CPULoad));
-  char *p;
 
   fp = popen("cat /proc/stat | grep \"cpu \" | awk '{print $2, $3, $4, $5, $6, $7, $8, $9}'", "r");
 
   while (fgets(path, 100, fp) != NULL)
-    printf("%s", path);
 
   cpuLoadData(prev, path);
-  debugPrintStructure(prev);
 
   sleep(1);
 
   fp = popen("cat /proc/stat | grep \"cpu \" | awk '{print $2, $3, $4, $5, $6, $7, $8, $9}'", "r");
 
   while (fgets(path, 100, fp) != NULL)
-    printf("%s", path);
 
   cpuLoadData(curr, path);
-  debugPrintStructure(curr);
 
   int prevIdle = prev->idle + prev->iowait;
   int idle = curr->idle + curr->iowait;
@@ -55,13 +63,13 @@ void getCPUActualLoad() {
 
   float cpuPercentage = (float)(totalFinal - idleFinal)/totalFinal*100;
 
-  printf("CPU percentage = %f %\n", cpuPercentage);
-
   free(prev);
   prev = NULL;
 
   free(curr);
   curr = NULL;
+
+  return (int) cpuPercentage;
 
 }
 

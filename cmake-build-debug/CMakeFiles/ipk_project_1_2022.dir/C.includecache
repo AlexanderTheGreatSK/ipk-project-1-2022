@@ -12,7 +12,13 @@ functions.h
 
 /home/alex/CLionProjects/ipk-project-1-2022/functions.h
 string.h
-/home/alex/CLionProjects/ipk-project-1-2022/string.h
+-
+stdlib.h
+-
+stdio.h
+-
+unistd.h
+-
 
 /home/alex/CLionProjects/ipk-project-1-2022/main.c
 stdio.h
@@ -23,8 +29,24 @@ string.h
 -
 sys/socket.h
 -
+sys/types.h
+-
+netinet/in.h
+-
 stdbool.h
 /home/alex/CLionProjects/ipk-project-1-2022/stdbool.h
+errno.h
+-
+sys/socket.h
+-
+netdb.h
+-
+netdb.h
+-
+arpa/inet.h
+-
+stdbool.h
+-
 functions.h
 /home/alex/CLionProjects/ipk-project-1-2022/functions.h
 

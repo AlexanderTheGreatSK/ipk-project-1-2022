@@ -6,7 +6,7 @@ LIBS=functions.c
 
 .PHONY: all
 all:
-	$(CC) $(MAIN) $(LIBS) -o hinfosvc $(CFLAGS)
+	$(CC) $(MAIN) $(LIBS) -o hinfosvc $(CFLAGS) -g
 
 
 .PHONY: run
